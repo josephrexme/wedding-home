@@ -110,7 +110,6 @@ section{
   h3{
     margin: 0;
     font-size: 2.6rem;
-    color: #c69898;
   }
   svg{
     position: absolute;
@@ -297,6 +296,11 @@ footer{
   position: absolute;
   top: 150px;
   right: -25px;
+  height: 600px;
+  background: #69131b;
+  img{
+    mix-blend-mode: luminosity;
+  }
 }
 
 @keyframes rotate {
