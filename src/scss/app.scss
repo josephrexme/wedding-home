@@ -301,13 +301,23 @@ footer{
 }
 
 .gallery{
+  display: grid;
+  grid-template-columns: 27% 73%;
+  grid-template-rows: 50% 50%;
   position: absolute;
   top: 150px;
-  right: -25px;
+  right: -40px;
   height: 600px;
   background: #69131b;
   img{
     mix-blend-mode: luminosity;
+    &:first-of-type{
+      grid-column: 2 / 4;
+    }
+    &:nth-of-type(2) {
+      grid-column: 1;
+      grid-row: 1;
+    }
   }
 }
 
