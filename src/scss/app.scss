@@ -1,0 +1,318 @@
+:root{
+  --side-padding: 5rem;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: 'PT Serif', serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+  color: #905656;
+}
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  padding: var(--side-padding) var(--side-padding) 1rem;
+  svg{
+    width: 3rem;
+    position: relative;
+    z-index: 100;
+  }
+  span{
+    display: block;
+    position: relative;
+    height: 100%;
+    &::after, &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: .2rem;
+      background: #000;
+      transition: transform .2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+    &::before{
+      top: 0;
+    }
+    &::after{
+      bottom: 0;
+    }
+  }
+  button{
+    position: relative;
+    z-index: 100;
+    appearance: none;
+    width: 3rem;
+    height: 1.4rem;
+    margin-top: 1rem;
+    padding: 0;
+    border: 0;
+    color: transparent;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    &:hover{
+      span::before{
+        transform: translateY(-.8rem);
+      }
+      span::after{
+        transform: translateY(.8rem);
+      }
+    }
+    .opened &{
+      span::before{
+        transform-origin: top left;
+        transform: translateY(-.5rem) rotate(45deg);
+      }
+      span::after{
+        transform-origin: bottom left;
+        transform: translateY(.5rem) rotate(-45deg);
+      }
+    }
+  }
+}
+section{
+  position: relative;
+}
+.section-one{
+  height: 60rem;
+  padding: var(--side-padding) var(--side-padding) 2rem;
+  h1{
+    position: relative;
+    width: 35rem;
+    margin-top: 14rem;
+    margin-bottom: 0;
+    font-size: 8rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    span{
+      display: block;
+    }
+    span:nth-of-type(2){
+      position: absolute;
+      top: -7.5rem;
+      right: -2rem;
+      font-family: 'Playfair Display SC', serif;
+      font-size: 16rem;
+    }
+    span:last-of-type{
+      margin-top: -3rem;
+      margin-left: 3rem;
+    }
+  }
+  h3{
+    margin: 0;
+    font-size: 2.6rem;
+    color: #c69898;
+  }
+  svg{
+    position: absolute;
+    top: 0;
+    left: -8rem;
+    z-index: -1;
+    width: 80%;
+    max-width: 60rem;
+    fill: #f5f5f5;
+  }
+}
+.section-two{
+  position: relative;
+  min-height: 80rem;
+  padding: var(--side-padding);
+  background: #FDF3F3;
+  overflow: hidden;
+  svg{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+  }
+  .plus-a{
+    left: 310px;
+  }
+  .love-a{
+    left: 180px;
+  }
+  .plus-b, .love-b, .triangle-b{
+    bottom: 80px;
+  }
+  .triangle-b{
+    left: 120px;
+  }
+  .love-b{
+    left: 250px;
+  }
+}
+.section-two::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -2rem;
+  width: 100%;
+  height: 10rem;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 1700 132' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2'%3E%3Cpath d='M.36 27.207s1105.773-39.672 1243.021 20.66c74.923 32.934 103.797 85.177 134.488 84 30.688-1.175 59.79-84.841 145.622-97.76 85.83-12.918 174.147-5.812 174.147-5.812L1699.996 0H0l.36 27.207z' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+.section-three{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 70rem;
+  padding: var(--side-padding);
+  text-align: center;
+}
+.section-three::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4rem;
+  width: 100%;
+  height: 10rem;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 1700 132' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2'%3E%3Cpath d='M.36 27.207s1105.773-39.672 1243.021 20.66c74.923 32.934 103.797 85.177 134.488 84 30.688-1.175 59.79-84.841 145.622-97.76 85.83-12.918 174.147-5.812 174.147-5.812L1699.996 0H0l.36 27.207z' fill='%23fdf3f3'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  transform: scaleX(-1);
+}
+.ceremony-container{
+  width: 90%;
+  max-width: 100rem;
+  height: 40rem;
+  margin: auto;
+  background: linear-gradient(rgba(200, 200, 200, .8), rgba(200, 200, 200, .8)), url(https://res.cloudinary.com/strich/image/upload/v1563942580/flower-bg_snfeep.jpg);
+  background-size: cover;
+}
+footer{
+  position: relative;
+  height: 15rem;
+  overflow: hidden;
+  p{
+    position: absolute;
+    right: 2rem;
+    bottom: 0;
+  }
+}
+// Images
+.image-container{
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: .4rem .8rem .8rem rgba(0, 0, 0, .3);
+  &:hover{
+    img{
+      transform: scale(1.3) translateX(-10px) translateY(10px);
+    }
+  }
+  img{
+    transition: transform 5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}
+.first-image{
+  position: absolute;
+  top: 15rem;
+  right: 20rem;
+  width: 300px;
+  height: 400px;
+}
+// Extras
+.blob-container{
+  position: absolute;
+  bottom: -1rem;
+  right: 25rem;
+  width: 30rem;
+  height: 30rem;
+  transform: scale(.8) rotate(0deg);
+  transform-origin: center;
+  animation: rolldance 4s ease infinite alternate;
+}
+.quotes{
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  transform: rotate(45deg);
+  opacity: .3;
+  font-family: 'Petit Formal Script', cursive;
+}
+.wave{
+  position: absolute;
+  top: 35rem;
+  left: 0;
+  right: 0;
+  height: 100vw;
+  margin-top: -200px;
+  margin-left: -200px;
+  background: rgb(184, 123, 119);
+  border-radius: 40%;
+  opacity: .4;
+  animation: shift 3s infinite linear;
+  &.w2{
+    background: #905656;
+    opacity: .1;
+    animation: shift 7s infinite linear;
+  }
+  &.w3{
+    animation: shift 5s infinite linear;
+    background: rgb(107, 12, 131);
+    opacity: .1
+  }
+}
+.filled-heading {
+  text-transform: uppercase;
+  font-family: 'helvetica', sans-serif;
+  font-size: 5em;
+  font-weight: bolder;
+  line-height: 0.9;
+}
+
+/* Animate the background shapes */
+.registry-background path {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+.registry-background path:nth-of-type(2n) {
+  animation: rotate 20s linear infinite;
+}
+.registry-background path:nth-of-type(2n + 1) {
+  animation: rotate 30s linear reverse infinite;
+}
+
+.hidden-nav{
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background: #a95f5f;
+  transform: translateY(-100vh);
+  transition: transform .8s ease-in-out;
+  .opened &{
+    transform: translateY(0);
+  }
+}
+
+.gallery{
+  position: absolute;
+  top: 150px;
+  right: -25px;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes shift{
+  from{
+    transform: rotate(360deg);
+  }
+}
+@keyframes rolldance{
+  0%{
+    transform: scale(.8) rotate(15deg);
+  }
+  100%{
+    transform: scale(1) rotate(-15deg);
+  }
+}

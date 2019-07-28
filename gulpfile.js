@@ -7,6 +7,7 @@ const $ = gulpLoadPlugins();
 const paths = {
   source: {
     scripts: [
+      'src/js/rellax.min.js',
       'src/js/main.js',
     ],
     styles: [
@@ -26,7 +27,7 @@ gulp.task('styles', () => {
     .pipe($.sourcemaps.init())
     .pipe($.sass({outputStyle: 'compressed'}).on('error', $.sass.logError))
     .pipe($.concat('app.css'))
-    .pipe($.autoprefixer({browsers: ['last 2 versions', '> 1%', 'Firefox ESR']}))
+    .pipe($.autoprefixer())
     .pipe($.cssnano())
     .pipe($.sourcemaps.write(paths.target.sourcemaps))
     .pipe(gulp.dest(paths.target.styles))

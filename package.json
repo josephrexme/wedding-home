@@ -12,6 +12,9 @@
   "engines": {
     "node": "11.15.0"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/josephrexme/wedding-home.git"
@@ -27,6 +30,7 @@
   "homepage": "https://github.com/josephrexme/wedding-home#readme",
   "dependencies": {
     "@babel/core": "^7.5.4",
+    "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.7",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.1.0",
