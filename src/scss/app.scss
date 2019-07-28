@@ -159,23 +159,31 @@ section{
   background-size: 100% 100%;
 }
 .section-three{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   height: 70rem;
   padding: var(--side-padding);
-  text-align: center;
+  overflow: hidden;
+  text-align: right;
 }
 .section-three::after{
   content: '';
   position: absolute;
   left: 0;
-  top: -4rem;
+  top: -2rem;
   width: 100%;
   height: 10rem;
   background: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 1700 132' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2'%3E%3Cpath d='M.36 27.207s1105.773-39.672 1243.021 20.66c74.923 32.934 103.797 85.177 134.488 84 30.688-1.175 59.79-84.841 145.622-97.76 85.83-12.918 174.147-5.812 174.147-5.812L1699.996 0H0l.36 27.207z' fill='%23fdf3f3'/%3E%3C/svg%3E");
   background-size: 100% 100%;
   transform: scaleX(-1);
+}
+@media(max-width: 770px) {
+  .section-two::after, .section-three::after {
+    top: -3rem;
+  }
+}
+@media(max-width: 520px) {
+  .section-two::after, .section-three::after {
+    top: -4rem;
+  }
 }
 .ceremony-container{
   width: 90%;
@@ -301,6 +309,14 @@ footer{
   img{
     mix-blend-mode: luminosity;
   }
+}
+
+.shout{
+  margin-top: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+  color: rgba(0, 0, 0, .1);
 }
 
 @keyframes rotate {
