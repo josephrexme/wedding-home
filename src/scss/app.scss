@@ -160,7 +160,7 @@ section{
 }
 .section-three{
   height: 70rem;
-  padding: var(--side-padding);
+  padding: var(--side-padding) 0;
   overflow: hidden;
   text-align: right;
 }
@@ -186,12 +186,13 @@ section{
   }
 }
 .ceremony-container{
-  width: 90%;
-  max-width: 100rem;
-  height: 40rem;
-  margin: auto;
-  background: linear-gradient(rgba(200, 200, 200, .8), rgba(200, 200, 200, .8)), url(https://res.cloudinary.com/strich/image/upload/v1563942580/flower-bg_snfeep.jpg);
+  --opacity: .2;
+  width: 100%;
+  height: 400px;
+  margin-top: 80px;
+  background: linear-gradient(rgba(200, 200, 200, var(--opacity)), rgba(200, 200, 200, var(--opacity))), url(https://res.cloudinary.com/strich/image/upload/v1563942580/flower-bg_snfeep.jpg);
   background-size: cover;
+  background-attachment: fixed;
 }
 footer{
   position: relative;
