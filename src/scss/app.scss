@@ -301,9 +301,11 @@ footer{
   height: 100vh;
   background: #a95f5f;
   transform: translateY(-100vh);
-  transition: transform .8s ease-in-out;
+  opacity: 0;
+  transition: all .8s ease-in-out;
   .opened &{
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -358,6 +360,11 @@ footer{
   h2{
     margin: 10px 0;
   }
+}
+
+.registry{
+  margin-bottom: 200px;
+  text-align: center;
 }
 
 @keyframes rotate {
