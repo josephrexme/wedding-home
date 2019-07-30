@@ -9,9 +9,12 @@ const paths = {
     scripts: [
       'src/js/rellax.min.js',
       'src/js/reticool.min.js',
+      'src/js/splitting.js',
+      'src/js/scroll-out.js',
       'src/js/main.js',
     ],
     styles: [
+      'src/css/**/*.css',
       'src/scss/**/*.scss'
     ]
   },
