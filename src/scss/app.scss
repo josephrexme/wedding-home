@@ -1,7 +1,8 @@
-:root{
-  --side-padding: 5rem;
+*{
+  box-sizing: border-box;
 }
 html{
+  --side-padding: 5rem;
   font-size: 62.5%;
 }
 body{
@@ -354,9 +355,10 @@ footer{
   position: absolute;
   right: 0;
   width: 100%;
-  max-width: 550px;
-  padding: 20px 80px 20px 20px;
+  max-width: 520px;
+  padding: 20px 80px 20px 80px;
   background: #fafafa;
+  box-shadow: 15px 18px 8px rgba(0, 0, 0, .05);
   h2{
     margin: 10px 0;
   }
@@ -365,6 +367,24 @@ footer{
 .registry{
   margin-bottom: 200px;
   text-align: center;
+  a{
+    display: inline-block;
+    width: 220px;
+    height: 76px;
+    color: #777;
+    border: solid medium #eee;
+    font-size: 2rem;
+  }
+  span{
+    display: inline-block;
+    width: inherit;
+    padding: 20px;
+    transition: all 1s ease;
+  }
+  a:hover span{
+    background: #ffa5a5;
+    transform: translate3d(10px, 10px, 0);
+  }
 }
 
 @keyframes rotate {
