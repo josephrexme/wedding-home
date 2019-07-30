@@ -8,6 +8,7 @@ const paths = {
   source: {
     scripts: [
       'src/js/rellax.min.js',
+      'src/js/reticool.min.js',
       'src/js/main.js',
     ],
     styles: [
