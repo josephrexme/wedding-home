@@ -404,6 +404,19 @@ footer{
       }
     }
   }
+  small{
+    display: block;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    a::after{
+      content: '-';
+      padding: 0 8px 0 16px;
+    }
+    a:last-of-type::after{
+      content: '';
+      padding: 0;
+    }
+  }
 }
 
 .gallery{
