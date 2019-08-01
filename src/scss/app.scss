@@ -20,7 +20,7 @@ a{
 .navigation{
   display: flex;
   justify-content: space-between;
-  padding: var(--side-padding) var(--side-padding) 1rem;
+  padding: var(--side-padding) 3rem 1rem;
   svg{
     width: 3rem;
     position: relative;
@@ -52,7 +52,7 @@ a{
     appearance: none;
     width: 3rem;
     height: 1.4rem;
-    margin-top: 1rem;
+    margin-top: .7rem;
     padding: 0;
     border: 0;
     color: transparent;
@@ -83,7 +83,7 @@ section{
   position: relative;
 }
 .section-one{
-  height: 60rem;
+  min-height: 60rem;
   padding: var(--side-padding) var(--side-padding) 2rem;
   h1{
     position: relative;
@@ -112,6 +112,16 @@ section{
         display: inline-block;
         animation: rollup 2s ease;
         animation-fill-mode: both;
+      }
+    }
+    @media(max-width: 470px) {
+      margin-top: 8rem;
+      font-size: 5rem;
+      > span:nth-of-type(2) {
+        top: -1rem;
+        left: 45%;
+        right: auto;
+        font-size: 7.5rem;
       }
     }
   }
@@ -196,7 +206,7 @@ section{
 .ceremony-container{
   --opacity: .2;
   width: 100%;
-  height: 480px;
+  height: 520px;
   margin-top: 80px;
   background: linear-gradient(rgba(200, 200, 200, var(--opacity)), rgba(200, 200, 200, var(--opacity))), url(https://res.cloudinary.com/strich/image/upload/v1563942580/flower-bg_snfeep.jpg);
   background-size: cover;
@@ -206,6 +216,18 @@ section{
   svg{
     width: 100%;
     font-size: 30px;
+  }
+  @media (max-width: 620px) {
+    svg{
+      width: 100%;
+    }
+    path{
+      transform-origin: top left;
+      transform: scale(0.6) translateX(-40%);
+    }
+    text{
+      transform: scale(1.5) translateX(1%);
+    }
   }
 }
 footer{
@@ -238,6 +260,35 @@ footer{
   right: 20rem;
   width: 300px;
   height: 400px;
+  @media (max-width: 1010px) {
+    top: 20rem;
+    right: 8rem;
+    width: 280px;
+    height: 380px;
+  }
+  @media (max-width: 780px) {
+    position: static;
+    width: 100%;
+    height: 900px;
+    margin: 110px 0 30px;
+    img{
+      margin-top: -80px;
+      width: 110%;
+      height: auto;
+    }
+  }
+  @media (max-width: 670px) {
+    height: 500px;
+  }
+  @media (max-width: 430px) {
+    height: 320px;
+  }
+  @media (max-width: 330px) {
+    height: auto;
+    img{
+      margin-top: -10px;
+    }
+  }
 }
 // Extras
 .blob-container{
@@ -249,6 +300,9 @@ footer{
   transform: scale(.8) rotate(0deg);
   transform-origin: center;
   animation: rolldance 4s ease infinite alternate;
+  @media (max-width: 1010px) {
+    display: none;
+  }
 }
 .quotes{
   position: absolute;
@@ -316,6 +370,9 @@ footer{
   transition: all 1s ease;
   font-size: 60px;
   font-family: 'Staatliches', cursive;
+  @media(max-width: 655px) {
+    font-size: 30px;
+  }
   .opened &{
     transform: translateY(0);
     opacity: 1;
@@ -369,6 +426,26 @@ footer{
   img, .cell{
     mix-blend-mode: luminosity;
   }
+  @media (max-width: 1300px) {
+    width: 800px;
+    height: 560px;
+    img{
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+  }
+  @media (max-width: 890px) {
+    position: static;
+    width: 100%;
+    margin: 10rem 0;
+  }
+  @media(max-width: 740px) {
+    height: 305px;
+  }
+  @media(max-width: 470px) {
+    height: 200px;
+  }
 }
 
 .shout{
@@ -378,6 +455,9 @@ footer{
   font-weight: 100;
   font-size: 90px;
   color: rgba(0, 0, 0, .04);
+  @media (max-width: 1070px) {
+    font-size: 50px;
+  }
 }
 
 .splitting .cell {
@@ -400,6 +480,12 @@ footer{
   box-shadow: 15px 18px 8px rgba(0, 0, 0, .05);
   h2{
     margin: 10px 0;
+  }
+  @media(max-width: 1030px) {
+    position: static;
+    margin: 5rem 0;
+    box-shadow: none;
+    transform: none !important;
   }
 }
 

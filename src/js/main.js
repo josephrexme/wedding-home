@@ -8,15 +8,24 @@
   });
 
   // Set up scrollout and splitting
-  Splitting();
-  setTimeout(()=>{ 
-    ScrollOut({
-      targets: '[data-scroll]',
-      cssProps: {
-        viewportY: true,
-      }
-    }).update();
-  },100);
+  function splitImage() {
+    let scroll;
+    if(document.body.clientWidth > 740) {
+      Splitting();
+      setTimeout(()=>{ 
+        ScrollOut({
+          targets: '[data-scroll]',
+          cssProps: {
+            viewportY: true,
+          }
+        }).update();
+      },100);
+    } else {
+      ScrollOut().teardown();
+    }
+  }
+  splitImage();
+  window.addEventListener('resize', splitImage);
 
   window.scrollTo(0,0);
   // Open hamburger menu
